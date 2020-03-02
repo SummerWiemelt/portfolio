@@ -1,9 +1,35 @@
-a.navHeader, a:hover {
+a.nav-header {
     color: black !important;
 }
-.navHeader {
-    font-family: 'Stalemate', ;
-    font-size: 4em;
-    flex-direction: column;
-    margin-top: 1em;
+nav.navbar {
+    padding-bottom: 0;
 }
+.nav-links {
+    padding-top: 0;
+}
+.nav-link {
+    font-size: 1em;
+    font-family: 'Roboto', ;
+}
+.nav-header {
+    font-family: 'Stalemate', ;
+    font-size: 2.3em;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+@media (min-width: 576px) {  }
+
+@media (min-width: 768px) { 
+    .nav-header {
+        font-size: 4em;
+        margin-top: 1em;
+    } 
+}
+
+
+@media (min-width: 992px) {  }
+
+
+@media (min-width: 1200px) {  }

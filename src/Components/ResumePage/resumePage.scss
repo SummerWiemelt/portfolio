@@ -1,0 +1,19 @@
+.resume-container {
+    padding: 0;
+}
+.resume-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-height: 800px) and (max-width: 450px) { 
+    .resume-image {
+        margin-top: 10vh;
+    }
+ }
+@media (min-width: 768px) {
+    .resume-image {
+        max-height: 75vh;
+    }
+}

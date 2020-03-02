@@ -6,9 +6,6 @@ import ProjectsPage from '../ProjectsPage/ProjectsPage';
 import ResumePage from '../ResumePage/ResumePage';
 import ContactPage from '../ContactPage/ContactPage';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -21,12 +18,10 @@ class Navigation extends Component {
       <Router>
         <Navbar bg='none'>
           <Nav className='ml-auto mr-auto'>
-
-              <Nav.Link href='/about' className='navHeader'>Summer Eisert-Wiemelt</Nav.Link>
-
+              <Nav.Link href='/about' className='nav-header'>Summer Eisert-Wiemelt</Nav.Link>
           </Nav>
         </Navbar>
-        <Navbar bg='none'>
+        <Navbar bg='none' className='nav-links'>
           <Nav className='ml-auto mr-auto'>
             <LinkContainer to='/about'>
               <Nav.Link>About</Nav.Link>
@@ -37,9 +32,6 @@ class Navigation extends Component {
             <LinkContainer to='/resume'>
               <Nav.Link>Resume</Nav.Link>
             </LinkContainer>
-            <LinkContainer to='/contact'>
-              <Nav.Link>Contact</Nav.Link>
-            </LinkContainer>
           </Nav>
         </Navbar>
 
@@ -47,10 +39,19 @@ class Navigation extends Component {
         <Route path='/about' render={() => <HomePage />} />
         <Route path='/projects' render={() => <ProjectsPage />} />
         <Route path='/resume' render={() => <ResumePage />} />
-        <Route path='/contact' render={() => <ContactPage />} />
       </Router>
     );
   }
 }
+
+/*  For future Contact Page with Email Form 
+        <LinkContainer to='/contact'>
+              <Nav.Link>Contact</Nav.Link>
+        </LinkContainer>
+
+        <Route path='/contact' render={() => <ContactPage />} />
+*/
+
+
 
 export default Navigation;
