@@ -17,33 +17,18 @@
     color: black;
     font-weight: bold;
 }
-.gif-row {
+.video-row {
     margin-top: 3em;
     font-size: 1em;
 }
-.desktop-gif {
-    width: 100vw;
-    max-width: 1000px;
+.desktop-video {
     border: 1px solid #f2f2f2;
 }
-.mobile-gif {
-    max-width: 350px;
-    max-height: 300px;
-    border: 2px solid #f2f2f2;
-}
 
-@media (min-width: 768px) { 
-    .mobile-gif {
-        max-height: 600px;
-    }
-}
 @media (min-width: 1200px) { 
     .project-container {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1000px;
-    }
-    .project-gif {
         max-width: 1000px;
     }
  }

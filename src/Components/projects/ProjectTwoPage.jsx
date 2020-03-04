@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 
-import desktopstill from '../../Assets/charcuterie-landing-still.png';
-import mobilestill from '../../Assets/charcuterie-mobile-still.png';
+import desktop from '../../Assets/charcuterie-desktop.mp4';
+import mobile from '../../Assets/charcuterie-mobile.mp4';
 import './projectTwo.scss';
-
-import gif from '../../Assets/charc.gif';
-import smallgif from '../../Assets/charc-mobile.gif';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import GifPlayer from 'react-gif-player';
+import ReactPlayer from 'react-player'
 
 class ProjectTwo extends Component {
   render() {
@@ -29,27 +26,17 @@ class ProjectTwo extends Component {
             
           </span>
         </Row>
-        <Row className='gif-row'>
+        <Row className='video-row'>
           <span className='project-text'>Website design</span>
         </Row>
         <Row className='justify-content-center'>
-          <GifPlayer
-            className='desktop-gif'
-            gif={gif}
-            still={desktopstill}
-            autoplay='true'
-          />
+        <ReactPlayer className='desktop-video' url={desktop} playing loop />
         </Row> 
-        <Row className='gif-row'>
+        <Row className='video-row'>
           <span className='project-text'>Responsive design works with all screen sizes</span>
         </Row>
-        <Row className='justify-content-center mobile-gif-parent'>
-          <GifPlayer
-            className='mobile-gif'
-            gif={smallgif}
-            still={mobilestill}
-            autoplay='true'
-          />
+        <Row className='justify-content-center'>
+          <ReactPlayer url={mobile} playing loop />
         </Row>
       </Container>
     );
