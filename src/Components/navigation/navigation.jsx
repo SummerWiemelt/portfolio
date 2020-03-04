@@ -5,6 +5,9 @@ import HomePage from '../HomePage/HomePage';
 import ProjectsPage from '../ProjectsPage/ProjectsPage';
 import ResumePage from '../ResumePage/ResumePage';
 import ContactPage from '../ContactPage/ContactPage';
+import ProjectOnePage from '../projects/ProjectOnePage';
+import ProjectTwoPage from '../projects/ProjectTwoPage';
+import ProjectThreePage from '../projects/ProjectThreePage';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -39,6 +42,9 @@ class Navigation extends Component {
         <Route path='/about' render={() => <HomePage />} />
         <Route path='/projects' render={() => <ProjectsPage />} />
         <Route path='/resume' render={() => <ResumePage />} />
+        <Route path='/Mistify' render={() => <ProjectOnePage />} />
+        <Route path='/Charcuterie' render={() => <ProjectTwoPage />} />
+        <Route path='/À-La-Mode' render={() => <ProjectThreePage />} />
       </Router>
     );
   }
