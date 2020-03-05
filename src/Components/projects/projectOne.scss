@@ -1,0 +1,16 @@
+.desktop-gif {
+    width: 100vw;
+    max-width: 1000px;
+}
+.desktop-video {
+    display: none;
+}
+
+@media (min-width: 576px) { 
+    .desktop-video {
+        display: block;
+    }
+    .desktop-gif {
+        display: none;
+    }
+}

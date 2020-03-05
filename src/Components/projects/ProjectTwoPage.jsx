@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import gif from '../../Assets/charc.gif';
 import desktop from '../../Assets/charcuterie-desktop.mp4';
 import mobile from '../../Assets/charcuterie-mobile.mp4';
 import './projectTwo.scss';
@@ -8,6 +9,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 import ReactPlayer from 'react-player'
+import GifPlayer from 'react-gif-player';
 
 class ProjectTwo extends Component {
   render() {
@@ -30,13 +32,18 @@ class ProjectTwo extends Component {
           <span className='project-text'>Website design</span>
         </Row>
         <Row className='justify-content-center'>
-        <ReactPlayer className='desktop-video' url={desktop} playing loop />
+        <GifPlayer
+            className='desktop-gif'
+            gif={gif}
+            autoplay='true'
+          />
+        <ReactPlayer className='desktop-video' url={desktop} playsinline playing loop />
         </Row> 
         <Row className='video-row'>
           <span className='project-text'>Responsive design works with all screen sizes</span>
         </Row>
         <Row className='justify-content-center'>
-          <ReactPlayer url={mobile} playing loop />
+          <ReactPlayer url={mobile} playing playsinline loop />
         </Row>
       </Container>
     );
